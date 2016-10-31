@@ -1,0 +1,27 @@
+{
+  "name": "layout-framework",
+  "version": "1.0.0",
+  "description": "less/css framework for projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2nddigital/layout-framework.git"
+  },
+  "keywords": [
+    "css",
+    "less",
+    "framework"
+  ],
+  "author": "2nd Digital",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2nddigital/layout-framework/issues"
+  },
+  "homepage": "https://github.com/2nddigital/layout-framework#readme",
+  "dependencies": {
+    "semantic-ui": "^2.2.6"
+  }
+}
