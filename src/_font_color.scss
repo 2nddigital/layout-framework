@@ -1,0 +1,69 @@
+//imports
+
+@import 'css3-mixins';
+@import url('https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro');
+
+//globals
+
+$color-interval: 10% !global;
+$lem-color-key: 'base' !default;
+
+//COLORS
+
+$lem-colors: (
+     'primary': (
+    'first': #784C3C,
+    'second': #966A4C,
+    'third': #D3A789
+  ),
+     'accent': (
+    'first': #885544,
+    'second': #AA7755,
+    'third': #EEBB99
+  ),
+     'black': (
+    'base': #000,
+    'accent': #121212,
+  ),
+     'white': (
+    'base': #fff,
+    'accent': #FCFCFC,
+  ),
+    
+);
+@function lem-color(
+  $name: 'primary',
+  $variant: $lem-color-key,
+  $opacity: 1
+) {
+  $color: null;
+  
+  // Get the color spectrum
+  $color-spectrum: map-get($lem-colors, $name);
+  
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+  
+ 
+  
+  @return $color;
+}
+
+//FONTS
+
+$h-font: 'Source Sans Pro', sans-serif;
+$p-font: 'Lato', sans-serif;
+
+// Example:
+p {
+  background-color: lem-color('primary', 'first');
+    font-family: $p-font;
+    font-weight: 900;
+}
+
+body {
+   
+    background-color: lem-color('accent', 'third');
+}
