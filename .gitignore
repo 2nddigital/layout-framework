@@ -87,3 +87,5 @@ jspm_packages
 .node_repl_history
 /src/semantic/dist/
 /src/semantic/tasks/
+/src/out/
+/src/style/out/
