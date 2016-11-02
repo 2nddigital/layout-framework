@@ -1,3 +1,5 @@
+/*& { @import "../semantic/src/semantic"; }*/
+
 @lemmen-primary-first: #784C3C;
 @lemmen-primary-second: #966A4C;
 @lemmen-primary-third: #D3A789;
@@ -9,34 +11,63 @@
 @lemmen-white-base: #fff;
 @lemmen-white-accent: #FCFCFC;
 
+@lemmen-main-menu-height: 6.5em;
+
 body {
   background-color: #ffffff;
 }
 
+.lemmen-outline{
+  outline: solid 3px ~"@{lemmen-accent-first}";
+  outline-offset: -10px;
+}
+
 .main.menu {
-  margin-top: 2em;
   border-radius: 0;
   border: none;
   box-shadow: none;
-  transition:
-          box-shadow 0.5s ease,
-          padding 0.5s ease
-;
+  transition: box-shadow 0.5s ease, padding 0.5s ease;
+  .item{
+    height: @lemmen-main-menu-height;
+    &.text {
+      line-height: @lemmen-main-menu-height - 2em;
+    }
+    &.logo {
+      padding: 0;
+    }
+    > .logo{
+      height: @lemmen-main-menu-height;
+      max-width: 100%;
+    }
+  }
+  .grid{
+    margin: 0;
+    width: 100%;
+  }
+  &.fixed {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
 }
 
-.main.menu.fixed {
-  background-color: #FFFFFF;
-  border: 1px solid #DDD;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-}
+.sub.menu {
+  display: flex;
+  width: auto;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  .item{
+    height: 5em;
 
-.main.menu .grid{
-  margin: 0;
-  width: 100%;
-}
-
-.main.menu .item{
-  height: 5em;
-  outline: solid 3px ~"@{lemmen-primary-first}";
-  outline-offset: -10px;
+    &.text {
+      line-height: 3em;
+      .lemmen-outline;
+    }
+  }
+  .grid{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 780px;
+  }
 }
