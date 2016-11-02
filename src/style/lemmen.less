@@ -1,5 +1,3 @@
-/*& { @import "../semantic/src/semantic"; }*/
-
 @lemmen-primary-first: #784C3C;
 @lemmen-primary-second: #966A4C;
 @lemmen-primary-third: #D3A789;
@@ -13,12 +11,23 @@
 
 @lemmen-main-menu-height: 6.5em;
 
+.lemmenColor(@category, @accent){
+  @color: ~"@{lemmen-@{category}-@{accent}}";
+}
+
+.randomColor(){
+  @randomColor: `Math.floor(Math.random()*16777215).toString(16)`;
+  @colorHex: e(@randomColor);
+  @color: ~"#@{colorHex}";
+}
+
 body {
   background-color: #ffffff;
 }
 
 .lemmen-outline{
-  outline: solid 3px ~"@{lemmen-accent-first}";
+  .lemmenColor(accent, first);
+  outline: solid 3px @color;
   outline-offset: -10px;
 }
 
@@ -30,7 +39,7 @@ body {
   .item{
     height: @lemmen-main-menu-height;
     &.text {
-      line-height: @lemmen-main-menu-height - 2em;
+      line-height: ~"calc(@{lemmen-main-menu-height} - 2em)";
     }
     &.logo {
       padding: 0;
@@ -69,5 +78,23 @@ body {
     margin-left: auto !important;
     margin-right: auto !important;
     width: 780px;
+  }
+}
+
+.lemmen.grid {
+  width: auto;
+  margin: 0;
+  height: ~"calc(100% - @{lemmen-main-menu-height})";
+  .row{
+    height: 50%;
+    margin: 0;
+    padding: 0;
+    .column{
+      padding: 0;
+      border: 1px solid greenyellow;
+      .box{
+
+      }
+    }
   }
 }
