@@ -10,8 +10,9 @@
         <link rel="stylesheet" type="text/css" href="style/out/lemmen.css">
     </head>
     <body>
+        <div class="main-menu-placeholder"></div>
 
-        <div class="ui borderless main menu">
+        <div class="ui borderless main menu fixed" style="position: fixed; top: 0; left: auto; z-index: 10;">
             <div class="ui equal width center aligned grid">
                 <a href="#" class="ui item text column">menu1</a>
                 <div class="ui item logo column">
@@ -21,7 +22,7 @@
             </div>
         </div>
 
-        <div class="ui borderless stackable sub menu">
+        <!--<div class="ui borderless stackable sub menu">
             <div class="ui equal width center aligned grid">
                 <a href="#" class="ui item text center aligned column"><span>Verkoop</span></a>
                 <a href="#" class="ui item text center aligned column"><span>Leggen</span></a>
@@ -30,7 +31,7 @@
                 <a href="#" class="ui item text center aligned column"><span>Renovatie</span></a>
                 <a href="#" class="ui item text center aligned column"><span>Trap-renovatie</span></a>
             </div>
-        </div>
+        </div>-->
 
         <div class="ui center aligned equal width stackable lemmen grid">
             <div class="row">
@@ -137,10 +138,6 @@
 
         <script>
             $(document).ready(function () {
-                $('.main.menu').visibility({
-                    type: 'fixed'
-                });
-
                 // lazy load images
                 $('.image').visibility({
                     type: 'image',

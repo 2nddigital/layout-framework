@@ -19,6 +19,13 @@
   @color: ~"@{lemmen-@{category}-@{accent}}";
 }
 
+.main-menu-placeholder{
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: @lemmen-main-menu-height;
+}
+
 .lemmen-outline{
   .lemmenColor(accent, second);
   outline: solid 4px @color;
@@ -97,8 +104,9 @@ body {
   }
 }
 
-@media @tablet {
 
+
+@media @tablet {
   .main.menu {
     border-radius: 0;
     border: none;
@@ -124,7 +132,7 @@ body {
     &.fixed {
       background-color: #FFFFFF;
       border: 1px solid #DDD;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -165,6 +173,7 @@ body {
   .lemmen.grid {
     width: auto;
     margin: 0;
+    padding: 0 !important;
     height: ~"calc(100% - @{lemmen-main-menu-height})";
     .row{
       height: 50%;
@@ -176,7 +185,7 @@ body {
         border: 1px solid greenyellow;
         .box{
           display: block;
-          margin: 50% auto;
+          margin: auto;
           border: 3px solid @lemmen-white-base;
           padding: 1em 2em 1em 2em;
           width: 50%;
