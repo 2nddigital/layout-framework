@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Framework template</title>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style/out/lemmen.css">
+</head>
+<body>
+<div class="main-menu-placeholder"></div>
+
+<div class="ui borderless main menu fixed" style="position: fixed; top: 0; left: auto; z-index: 10;">
+    <div class="ui equal width center aligned grid">
+        <a href="#" class="ui item text column">menu1</a>
+        <div class="ui item logo column">
+            <img src="http://placehold.it/350x150" class="ui logo">
+        </div>
+        <a href="#" class="ui item text column">menu1</a>
+    </div>
+</div>
+
+<!--<div class="ui borderless stackable sub menu">
+    <div class="ui equal width center aligned grid">
+        <a href="#" class="ui item text center aligned column"><span>Verkoop</span></a>
+        <a href="#" class="ui item text center aligned column"><span>Leggen</span></a>
+        <a href="#" class="ui item text center aligned column"><span>Onderhoud</span></a>
+        <a href="#" class="ui item text center aligned column"><span>Reparatie</span></a>
+        <a href="#" class="ui item text center aligned column"><span>Renovatie</span></a>
+        <a href="#" class="ui item text center aligned column"><span>Trap-renovatie</span></a>
+    </div>
+</div>-->
+
+<div class="ui center aligned equal width stackable lemmen grid">
+    <div class="row">
+        <div class="column" style="background-image: url('https://lh5.googleusercontent.com/u6ofHdicaZTiUvvtp8zhXpFdCa2wCberwDbd4e4eVMpBzEJDzgiVLNzcWCuh-fB4azDF2F2o_TX_yns=w1920-h920-rw');">
+            <a class="ui text box box-color-style box-color-style-1" href="#"><div class="box-title">Verkoop</div></a>
+        </div>
+        <div class="column"style="background-image: url('https://lh5.googleusercontent.com/6JkO4B4lSZ8S4e9V6jT6xeAqaJIVS97QaOhrcEsbOImljjySrwOpbR1qLt0AdZXxFwHGeW3SU6HpY0M=w1920-h920-rw');">
+
+            <a class="ui text box box-color-style box-color-style-3" href="#"><div class="box-title">Leggen</div></a>
+        </div>
+        <div class="column"style="background-image: url('https://lh3.googleusercontent.com/L3rfAS4Gl4hBLq-2tVLBDNhjmRB6BozxYFurJxPy8b82DbNiKjEJc_XnXCHloHs7quN3Ni9g4SzNMJU=w1920-h920-rw');">
+
+            <a class="ui text box box-color-style box-color-style-2" href="#"><div class="box-title">Onderhoud</div></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column"style="background-image: url('https://lh6.googleusercontent.com/HDCozA-WKeOB50AipnaS2zbPduMXZmhcra3HgdH-pvU_ygMZ-n4i5cJ73UInr3XxBoZxF35FFT38o1Y=w1920-h920-rw');">
+
+            <a class="ui item text box box-color-style box-color-style-2" href="#"><div class="box-title">Reparatie</div></a>
+        </div>
+        <div class="column"style="background-image: url('https://lh4.googleusercontent.com/hnU3UDWQTNxfX8lcnSsvqdChVY7MihU6XkKm8wtMVCeuTrw-erfyOvA4B4E4unp4LwDcAwrYzJfXPF0=w1920-h920-rw');">
+
+            <a class="ui item text box box-color-style box-color-style-1" href="#"><div class="box-title">Renovatie</div></a>
+        </div>
+        <div class="column"style="background-image: url('https://lh3.googleusercontent.com/kqSskFINxAlz8fVJeK3Jf1FJcRq-5Fi_Ss4WwQvGXPPjQvLVUgmYSwI6gKqQi5upSU-oi1Yo1cYivK4=w1920-h920-rw');">
+
+            <a class="ui item text box box-color-style box-color-style-3" href="#"><div class="box-title">Trap-renovatie</div></a>
+        </div>
+    </div>
+</div>
+
+<div class="homepage-info">Openingstijden</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // lazy load images
+        $('.image').visibility({
+            type: 'image',
+            transition: 'vertical flip in',
+            duration: 500
+        });
+
+        // show dropdown on hover
+        $('.main.menu  .ui.dropdown').dropdown({
+            on: 'hover'
+        });
+    });
+</script>
+</body>
+</html>
