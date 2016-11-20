@@ -12,7 +12,7 @@
 @lemmen-grid-no-hover-opacity: 0.5;
 @lemmen-grid-hover-opacity: 0.9;
 
-@lemmen-main-menu-height: 6.5em;
+@lemmen-main-menu-height: 90px;
 
 @desktop: ~"only screen and (min-width : 992px)";
 @tablet: ~"only screen and (min-width : 768px)";
@@ -50,11 +50,13 @@ body {
   border-radius: 0;
   border: none;
   box-shadow: none;
+  font-size: 1.2em;
   transition: box-shadow 0.5s ease, padding 0.5s ease;
   .item{
     height: @lemmen-main-menu-height;
     &.text {
-      line-height: ~"calc(@{lemmen-main-menu-height} - 2em)";
+      padding: 0;
+      line-height:@lemmen-main-menu-height;
     }
     &.logo {
       padding: 0;
@@ -112,13 +114,15 @@ body {
 @media @tablet {
   .main.menu {
     border-radius: 0;
+    font-size: 1.2em;
     border: none;
     box-shadow: none;
     transition: box-shadow 0.5s ease, padding 0.5s ease;
     .item{
       height: @lemmen-main-menu-height;
       &.text {
-        line-height: ~"calc(@{lemmen-main-menu-height} - 2em)";
+        padding: 0;
+        line-height:@lemmen-main-menu-height;
       }
       &.logo {
         padding: 0;
