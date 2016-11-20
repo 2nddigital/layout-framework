@@ -63,7 +63,7 @@
     </div>
 </div>
 
-<div class="homepage-info">Openingstijden</div>
+<div class="homepage-info-popover" id="homepage-info"><div class="homepage-info-title">Openingstijden</div></div>
 
 <script
         src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -83,6 +83,10 @@
         // show dropdown on hover
         $('.main.menu  .ui.dropdown').dropdown({
             on: 'hover'
+        });
+
+        $('#homepage-info').click(function () {
+            $(this).toggleClass("open");
         });
     });
 </script>
