@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
 			closeFaqsContainer.addClass('move-left');
 			$('body').addClass('cd-overlay');
 		} else {
-	        $('body,html').animate({ 'scrollTop': target.offset().top - 19}, 200); 
+	        $('body,html').animate({ 'scrollTop': target.offset().top - 19 - 90}, 200);
 		}
 	});
 
@@ -116,7 +116,7 @@ jQuery(document).ready(function($){
 				activeCategory = $('.cd-faq-categories a[href="#'+actual.attr('id')+'"]'),
 				topSection = (activeCategory.parent('li').is(':first-child')) ? 0 : Math.round(actual.offset().top);
 			
-			if ( ( topSection - 20 <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + margin - 20 > $(window).scrollTop() ) ) {
+			if ( ( (topSection - 20 - 90) <= $(window).scrollTop() ) && ( Math.round(actual.offset().top) + actual.height() + (margin - 20 - 90) > $(window).scrollTop() ) ) {
 				activeCategory.addClass('selected');
 			}else {
 				activeCategory.removeClass('selected');
