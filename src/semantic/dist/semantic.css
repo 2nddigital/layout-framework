@@ -20327,7 +20327,7 @@ ol.ui.horizontal.list li:before,
     width: 100% !important;
     margin: 0em 0em !important;
     box-shadow: none !important;
-    padding: 1rem 1rem !important;
+    padding: 0px 0px !important;
   }
 
   .ui.stackable.grid:not(.vertically) > .row {
@@ -20347,8 +20347,8 @@ ol.ui.horizontal.list li:before,
 
   .ui.grid .ui.stackable.grid,
   .ui.segment:not(.vertical) .ui.stackable.page.grid {
-    margin-left: -1rem !important;
-    margin-right: -1rem !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
 
   /* Divided Stackable */
@@ -20373,8 +20373,8 @@ ol.ui.horizontal.list li:before,
   .ui.stackable.divided:not(.vertically).grid > .row > .column {
     border-top: 1px solid rgba(34, 36, 38, 0.15);
     box-shadow: none !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .ui.stackable.celled.grid > .row {
