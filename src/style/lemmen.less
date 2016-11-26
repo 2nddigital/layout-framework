@@ -46,6 +46,11 @@ body {
   width: 100%;
 }
 
+.spacer{
+  display: block;
+  height: 50px;
+}
+
 .main.menu{
   border-radius: 0;
   border: none;
@@ -78,7 +83,6 @@ body {
 }
 
 .sub.menu {
-  display: flex;
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -110,8 +114,37 @@ body {
 }
 
 
+.contact-page-container{
+  height: 500px;
+  overflow: hidden;
+  .contact-page{
+    .contact-form{
+      max-width: 1000px;
+    }
+    .gmaps{
+
+    }
+  }
+}
+
+
+.wide-photo-box{
+  display: block;
+  width: 100%;
+  background-color: #A333C8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
 
 @media @tablet {
+  .contact-page-container{
+    margin: 0 30px 0 30px;
+  }
+
   .main.menu {
     border-radius: 0;
     font-size: 1.2em;
