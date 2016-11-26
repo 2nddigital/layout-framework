@@ -58,7 +58,34 @@
     </div>
 </div>
 
-<div class="homepage-info-popover" id="homepage-info"><div class="homepage-info-title">Openingstijden</div></div>
+<div class="homepage-info-popover" id="homepage-info"><div class="homepage-info-title" id="homepage-info-button">Openingstijden</div><div class="homepage-info-content">
+    <table class="ui celled table">
+        <tbody>
+        <tr>
+            <td>Maandag</td><td>Op afspraak</td>
+        </tr>
+        <tr>
+            <td>Dinsdag</td><td>Op afspraak</td>
+        </tr>
+        <tr>
+            <td>Woensdag</td><td>Op Afspraak</td>
+        </tr>
+        <tr>
+            <td>Donderdag</td><td>17.00 - 21.00</td>
+        </tr>
+        <tr>
+            <td>Vrijdag</td><td>13.30 - 18.00</td>
+        </tr>
+        <tr>
+            <td>Zaterdag</td><td>10.00 - 16.00</td>
+        </tr>
+        <tr>
+            <td>Zondag</td><td>Gesloten</td>
+        </tr>
+        </tbody>
+
+    </table>
+</div> </div>
 
 <script>
     $(document).ready(function () {
@@ -74,8 +101,8 @@
             on: 'hover'
         });
 
-        $('#homepage-info').click(function () {
-            $(this).toggleClass("open");
+        $('#homepage-info-button').click(function () {
+            $("#homepage-info").toggleClass("open");
         });
     });
 </script>
