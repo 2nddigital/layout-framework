@@ -58,7 +58,8 @@
     </div>
 </div>
 
-<div class="homepage-info-popover" id="homepage-info"><div class="homepage-info-title" id="homepage-info-button">Openingstijden</div><div class="homepage-info-content">
+<div class="homepage-info-popover" id="homepage-info">
+    <div class="homepage-info-title" id="homepage-info-button"><i class="angle up icon"></i>Openingstijden<i class="angle up icon"></i></div><div class="homepage-info-content">
     <table class="ui celled table">
         <tbody>
         <tr>
@@ -103,6 +104,7 @@
 
         $('#homepage-info-button').click(function () {
             $("#homepage-info").toggleClass("open");
+            $("#homepage-info-button > .icon").toggleClass("up").toggleClass("down");
         });
     });
 </script>
