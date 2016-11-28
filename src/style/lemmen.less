@@ -81,6 +81,9 @@ body {
     .block-title;
     color: white;
     background-color: @lemmen-accent-first;
+    &:hover{
+      background-color: @lemmen-primary-first;
+    }
   }
 }
 
@@ -294,6 +297,17 @@ body {
     .contact-page{
       .gmaps{
         margin: 0;
+      }
+    }
+  }
+
+  .lemmen-info{
+    .row .column{
+      &:nth-child(2) > .lemmen-info-block{
+        margin: 0 auto 0 2vw !important;
+      }
+      &:nth-child(1) > .lemmen-info-block{
+        margin: 0 2vw 0 auto !important;
       }
     }
   }
