@@ -35,6 +35,11 @@
   outline-offset: -10px;
 }
 
+.lm-content{
+  display: table!important;
+  height: auto;
+}
+
 .contact-btn{
   display: block;
   background-color: black;
@@ -45,6 +50,35 @@
   height: 75px;
   width: 100%;
   margin: 20px auto 20px auto;
+  box-shadow: inset 0px 0px 0px 5px black;
+  -webkit-box-shadow: inset 0px 0px 0px 5px black;
+
+  &:hover{
+    color: black;
+    background-color: white;
+  }
+}
+
+.full-width-header{
+  font-weight: 200;
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 2em;
+
+  &.dark{
+    background-color: @lemmen-primary-first;
+    color: white;
+
+  }
+  &.lighter{
+    background-color: @lemmen-primary-second;
+    color: white;
+  }
+  &.light{
+    background-color: @lemmen-primary-third;
+    color: black;
+  }
 }
 
 .randomColor(){
