@@ -109,6 +109,12 @@ body {
     height: 175px;
     width: 100%;
     .block-visual{
+      &.full-width{
+        width: 100%;
+      }
+      &.half-width{
+        width: 50%;
+      }
       float: left;
       display: block;
       width: 50%;
@@ -363,11 +369,11 @@ body {
   }
 
   .lemmen-info{
-    .row .column{
-      &:nth-child(2) > .lemmen-info-block{
+    .column{
+      &:nth-child(2n+0) > .lemmen-info-block{
         margin: 0 auto 0 2vw !important;
       }
-      &:nth-child(1) > .lemmen-info-block{
+      &:nth-child(2n+1) > .lemmen-info-block{
         margin: 0 2vw 0 auto !important;
       }
     }
