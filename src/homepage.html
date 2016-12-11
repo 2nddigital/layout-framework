@@ -113,6 +113,28 @@
             $("#homepage-info").toggleClass("open");
             $("#homepage-info-button > .icon").toggleClass("up").toggleClass("down");
         });
+
+        $(window).resize(function () {
+            doResizeAction()
+        });
+
+        $('#menu-toggle-btn').click(function () {
+            $('.switchable').toggle();
+        });
+
+        function doResizeAction() {
+            if($(window).width() <= 768){
+                //mobile layout
+                $('#menu-toggle-btn').show();
+                $('.switchable').hide();
+            }else{
+                //desktop layout
+                $('#menu-toggle-btn').hide();
+                $('.switchable').show();
+            }
+        }
+
+        doResizeAction();
     });
 </script>
 </body>

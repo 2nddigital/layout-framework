@@ -69,7 +69,7 @@
             <li>
                 <a class="cd-faq-trigger" href="#0">Doe-het-zelf & gereedschap</a>
                 <div class="cd-faq-content">
-                    <p>Een deel van de klanten van Lemmen Parket gaat zelf aan de slag met de gekochte producten. Dat is tegenwoordig, dankzij het click systeem, wat veelal verwerkt is in de planken, niet meer zo moeilijk. Heeft men daarbij nog apparatuur nodig, zoals bijvoorbeeld een bouwdroger of een zaagmachine, dan kan men deze ook huren bij Lemmen Parket.</p>
+                    <p>Een deel van de klanten van Lemmen Parket gaat zelf aan de slag met de gekochte producten. Dat is tegenwoordig, dankzij het click systeem, wat veelal verwerkt is in de planken, niet meer zo moeilijk.</p>
                 </div> <!-- cd-faq-content -->
             </li>
 
@@ -330,6 +330,28 @@
         $('#homepage-info').click(function () {
             $(this).toggleClass("open");
         });
+
+        $(window).resize(function () {
+            doResizeAction()
+        });
+
+        $('#menu-toggle-btn').click(function () {
+            $('.switchable').toggle();
+        });
+
+        function doResizeAction() {
+            if($(window).width() <= 768){
+                //mobile layout
+                $('#menu-toggle-btn').show();
+                $('.switchable').hide();
+            }else{
+                //desktop layout
+                $('#menu-toggle-btn').hide();
+                $('.switchable').show();
+            }
+        }
+
+        doResizeAction();
     });
 </script>
 <script src="scripts/faq.js"></script>

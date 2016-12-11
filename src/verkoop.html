@@ -30,12 +30,13 @@
 
 <div class="ui borderless stackable sub menu">
     <div class="ui equal width center aligned grid">
-        <a href="verkoop.html" class="ui item text center aligned column selected"><span>Verkoop</span></a>
-        <a href="leggen.html" class="ui item text center aligned column"><span>Leggen</span></a>
-        <a href="onderhoud.html" class="ui item text center aligned column"><span>Onderhoud</span></a>
-        <a href="reparatie.html" class="ui item text center aligned column"><span>Reparatie</span></a>
-        <a href="renovatie.html" class="ui item text center aligned column"><span>Renovatie</span></a>
-        <a href="traprenovatie.html" class="ui item text center aligned column"><span>Traprenovatie</span></a>
+        <a href="#" class="ui item text center aligned column" id="menu-toggle-btn"><span>Menu</span></a>
+        <a href="verkoop.html" class="ui item text center aligned column switchable selected"><span>Verkoop</span></a>
+        <a href="leggen.html" class="ui item text center aligned column switchable"><span>Leggen</span></a>
+        <a href="onderhoud.html" class="ui item text center aligned column switchable"><span>Onderhoud</span></a>
+        <a href="reparatie.html" class="ui item text center aligned column switchable"><span>Reparatie</span></a>
+        <a href="renovatie.html" class="ui item text center aligned column switchable"><span>Renovatie</span></a>
+        <a href="traprenovatie.html" class="ui item text center aligned column switchable"><span>Traprenovatie</span></a>
     </div>
 </div>
 
@@ -52,7 +53,7 @@
         <li>verdekt vernagelen op regels die van te voren bevestigd zijn op de ondervloer</li>
         <li>verlijmen op de betonvloer</li>
     </ul>
-    </lli>
+    </li>
     <li>Parketvloeren zwevend leggen door middel van:
         <ul>
             <li>verlijmen in de mes en groef verbinding</li>
@@ -62,9 +63,7 @@
     </li>
 </ul>
 <p class="ui container">Europees eiken is de meest gebruikte houtsoort voor de vloeren.
-De eiken vloeren zijn te verkrijgen in verschillende klassen, dit zijn richtlijnen, er zijn geen vastgestelde  normen.
-<br><br>
-Lamel eiken in verschillende breedtes:</p>
+De eiken vloeren zijn te verkrijgen in verschillende klassen, dit zijn richtlijnen, er zijn geen vastgestelde  normen.</p>
 <ul class="ui container">
     <li>Premier:  geen spint, geen noesten, pitje mogelijk, geen grote kleurschakeringen
     </li>
@@ -167,6 +166,28 @@ Lamel eiken in verschillende breedtes:</p>
         $('#homepage-info').click(function () {
             $(this).toggleClass("open");
         });
+
+        $(window).resize(function () {
+            doResizeAction()
+        });
+
+        $('#menu-toggle-btn').click(function () {
+            $('.switchable').toggle();
+        });
+
+        function doResizeAction() {
+            if($(window).width() <= 768){
+                //mobile layout
+                $('#menu-toggle-btn').show();
+                $('.switchable').hide();
+            }else{
+                //desktop layout
+                $('#menu-toggle-btn').hide();
+                $('.switchable').show();
+            }
+        }
+
+        doResizeAction();
     });
 </script>
 </body>

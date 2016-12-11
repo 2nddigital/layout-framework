@@ -30,15 +30,15 @@
 
 <div class="ui borderless stackable sub menu">
     <div class="ui equal width center aligned grid">
-        <a href="verkoop.html" class="ui item text center aligned column"><span>Verkoop</span></a>
-        <a href="leggen.html" class="ui item text center aligned column"><span>Leggen</span></a>
-        <a href="onderhoud.html" class="ui item text center aligned column selected"><span>Onderhoud</span></a>
-        <a href="reparatie.html" class="ui item text center aligned column"><span>Reparatie</span></a>
-        <a href="renovatie.html" class="ui item text center aligned column"><span>Renovatie</span></a>
-        <a href="traprenovatie.html" class="ui item text center aligned column"><span>Traprenovatie</span></a>
+        <a href="#" class="ui item text center aligned column" id="menu-toggle-btn"><span>Menu</span></a>
+        <a href="verkoop.html" class="ui item text center aligned column switchable"><span>Verkoop</span></a>
+        <a href="leggen.html" class="ui item text center aligned column switchable"><span>Leggen</span></a>
+        <a href="onderhoud.html" class="ui item text center aligned column switchable selected"><span>Onderhoud</span></a>
+        <a href="reparatie.html" class="ui item text center aligned column switchable"><span>Reparatie</span></a>
+        <a href="renovatie.html" class="ui item text center aligned column switchable"><span>Renovatie</span></a>
+        <a href="traprenovatie.html" class="ui item text center aligned column switchable"><span>Traprenovatie</span></a>
     </div>
 </div>
-
 <div class="spacer"></div>
 
 <div class="content-filter"><a href="#" data-tag="olie" class="content-filter-element">olie</a> - <a href="#" data-tag="olie" class="content-filter-element">dingen</a> - <a href="#" data-tag="olie" class="content-filter-element">overig</a> - <a href="#" data-tag="olie" class="content-filter-element">koe</a> - <a href="#" data-tag="olie" class="content-filter-element">doeg</a> - <a href="#" data-tag="olie" class="content-filter-element">blub</a> - <a href="#" data-tag="" class="content-filter-element">alles</a></div>
@@ -589,6 +589,28 @@
                 $(".product[data-tag~='" + filter + "']").fadeIn();
             }
         });
+
+        $(window).resize(function () {
+            doResizeAction()
+        });
+
+        $('#menu-toggle-btn').click(function () {
+            $('.switchable').toggle();
+        });
+
+        function doResizeAction() {
+            if($(window).width() <= 768){
+                //mobile layout
+                $('#menu-toggle-btn').show();
+                $('.switchable').hide();
+            }else{
+                //desktop layout
+                $('#menu-toggle-btn').hide();
+                $('.switchable').show();
+            }
+        }
+
+        doResizeAction();
     });
 </script>
 </body>

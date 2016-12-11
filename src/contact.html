@@ -28,24 +28,15 @@
     </div>
 </div>
 
-<!--<div class="ui borderless stackable sub menu">
-    <div class="ui equal width center aligned grid">
-        <a href="#" class="ui item text center aligned column"><span>Verkoop</span></a>
-        <a href="#" class="ui item text center aligned column"><span>Leggen</span></a>
-        <a href="#" class="ui item text center aligned column"><span>Onderhoud</span></a>
-        <a href="#" class="ui item text center aligned column"><span>Reparatie</span></a>
-        <a href="#" class="ui item text center aligned column"><span>Renovatie</span></a>
-        <a href="#" class="ui item text center aligned column"><span>Traprenovatie</span></a>
-    </div>
-</div>-->
 <div class="ui borderless stackable sub menu">
     <div class="ui equal width center aligned grid">
-        <a href="verkoop.html" class="ui item text center aligned column"><span>Verkoop</span></a>
-        <a href="leggen.html" class="ui item text center aligned column"><span>Leggen</span></a>
-        <a href="onderhoud.html" class="ui item text center aligned column"><span>Onderhoud</span></a>
-        <a href="reparatie.html" class="ui item text center aligned column"><span>Reparatie</span></a>
-        <a href="renovatie.html" class="ui item text center aligned column"><span>Renovatie</span></a>
-        <a href="traprenovatie.html" class="ui item text center aligned column"><span>Traprenovatie</span></a>
+        <a href="#" class="ui item text center aligned column" id="menu-toggle-btn"><span>Menu</span></a>
+        <a href="verkoop.html" class="ui item text center aligned column switchable"><span>Verkoop</span></a>
+        <a href="leggen.html" class="ui item text center aligned column switchable"><span>Leggen</span></a>
+        <a href="onderhoud.html" class="ui item text center aligned column switchable"><span>Onderhoud</span></a>
+        <a href="reparatie.html" class="ui item text center aligned column switchable"><span>Reparatie</span></a>
+        <a href="renovatie.html" class="ui item text center aligned column switchable"><span>Renovatie</span></a>
+        <a href="traprenovatie.html" class="ui item text center aligned column switchable"><span>Traprenovatie</span></a>
     </div>
 </div>
 <div class="contact-page-container">
@@ -88,7 +79,7 @@
         </div>
         <div class="seven wide column">
             <div class="gmaps">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.0794426296266!2d5.879913016085188!3d51.34644977960906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c748f8de363d49%3A0x148251b39a17e687!2sLemmen+Parket!5e0!3m2!1snl!2snl!4v1481456394461" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.0794426296266!2d5.879913016085188!3d51.34644977960906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c748f8de363d49%3A0x148251b39a17e687!2sLemmen+Parket!5e0!3m2!1snl!2snl!4v1481456394461" frameborder="0" style="border:0; height: 100%; width: 100%;" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -113,6 +104,28 @@
         $('#homepage-info').click(function () {
             $(this).toggleClass("open");
         });
+
+        $(window).resize(function () {
+            doResizeAction()
+        });
+
+        $('#menu-toggle-btn').click(function () {
+            $('.switchable').toggle();
+        });
+
+        function doResizeAction() {
+            if($(window).width() <= 768){
+                //mobile layout
+                $('#menu-toggle-btn').show();
+                $('.switchable').hide();
+            }else{
+                //desktop layout
+                $('#menu-toggle-btn').hide();
+                $('.switchable').show();
+            }
+        }
+
+        doResizeAction();
     });
 </script>
 </body>
