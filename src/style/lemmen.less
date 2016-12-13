@@ -232,6 +232,7 @@ body {
     }
     .gmaps{
       margin-top: 20px;
+      padding-bottom: 20px;
       display: block;
       width: 100%;
       height: 100%;
@@ -382,10 +383,17 @@ body {
 
   .lemmen-info{
     .column{
-      &:nth-child(2n+0) > .lemmen-info-block{
+      &:not(.product):nth-child(2n+0) > .lemmen-info-block{
         margin: 0 auto 0 2vw !important;
       }
-      &:nth-child(2n+1) > .lemmen-info-block{
+      &:not(.product):nth-child(2n+1) > .lemmen-info-block{
+        margin: 0 2vw 0 auto !important;
+      }
+
+      &.p-right > .lemmen-info-block{
+        margin: 0 auto 0 2vw !important;
+      }
+      &.p-left > .lemmen-info-block{
         margin: 0 2vw 0 auto !important;
       }
     }
