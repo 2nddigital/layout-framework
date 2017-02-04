@@ -14,6 +14,7 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -21,7 +22,7 @@
 <div class="ui borderless main menu fixed" style="position: fixed; top: 0; left: auto; z-index: 10;">
     <div class="ui equal width center aligned grid">
         <a href="about.html" class="ui item text column">Over Ons</a>
-        <a href="homepage.html" class="ui item logo column">
+        <a href="index.html" class="ui item logo column">
             <img src="assets/logo.png" class="ui logo">
         </a>
         <a href="contact.html" class="ui item text column">Contact</a>
@@ -42,7 +43,7 @@
 <div class="contact-page-container">
     <div class="contact-page ui stackable grid">
         <div class="nine wide column">
-            <form class="ui contact-form form">
+            <form class="ui contact-form form" id="contactform" method="post" action="mail.php">
                 <h4 class="ui dividing header">Neem contact op</h4>
                 <div class="field">
                     <label>Naam</label>
@@ -57,15 +58,28 @@
                 </div>
                 <div class="field">
                     <div class="two fields">
-
-                        <div class="field">
-                            <label>Telefoon</label>
-                            <input type="text" name="phone" placeholder="Telefoonnummer">
+                        <div class="field required">
+                            <label>Adres</label>
+                            <input type="text" name="adres" id="adresinput" placeholder="Adres" required>
                         </div>
 
-                        <div class="field">
+                        <div class="field required">
+                            <label>Plaats</label>
+                            <input type="text" name="plaats" id="plaatsinput" placeholder="Plaats" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="two fields">
+
+                        <div class="field required">
+                            <label>Telefoon</label>
+                            <input type="text" name="phone" id="phoneinput" placeholder="Telefoonnummer" required>
+                        </div>
+
+                        <div class="field required">
                             <label>Email</label>
-                            <input type="email" name="mail" placeholder="Email adres">
+                            <input type="email" name="mail" id="emailinput" placeholder="Email adres" required>
                         </div>
                     </div>
                 </div>
@@ -73,8 +87,8 @@
                     <label>Bericht</label>
                     <textarea name="message"></textarea>
                 </div>
-
-                <button class="ui button" type="submit">Verzenden</button>
+                <button class="g-recaptcha ui button" data-sitekey="6Lc9LxAUAAAAACxrKr4t9NT3KiFAPJXrG150SzeH" data-callback="onSubmit">Verzenden</button>
+                <!-- <button class="ui button" type="submit">Verzenden</button> -->
             </form>
         </div>
         <div class="seven wide column">
@@ -82,10 +96,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.0794426296266!2d5.879913016085188!3d51.34644977960906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c748f8de363d49%3A0x148251b39a17e687!2sLemmen+Parket!5e0!3m2!1snl!2snl!4v1481456394461" frameborder="0" style="border:0; height: 100%; width: 100%;" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
-</div>
-
-<table class="ui celled table" style="max-width: 700px; margin: 0 auto 1em auto">
+        <div class="nine wide column"><table class="ui celled compact table" style="max-width: 700px; margin: 0 auto 1em auto">
     <thead>
     <tr>
         <th colspan="2">Openingstijden</th>
@@ -115,8 +126,17 @@
     </tr>
     </tbody>
 
-</table>
-<iframe frameborder="0" allowtransparency="true" src="https://www.klantenvertellen.nl/widget/dtg/lemmen_parket/" style="height: 100px; width: 100%; max-width: 425px; display: block; margin: 0 auto 1em auto;"></iframe>
+</table></div>
+        <div class="seven wide column">
+            <iframe frameborder="0" allowtransparency="true" src="https://www.klantenvertellen.nl/widget/dtg/lemmen_parket/" style="height: 100px; width: 100%; max-width: 425px; display: block; margin: 0 auto 1em auto;"></iframe>
+            <a title="CBW erkend" href="http://wonen.cbw-erkend.nl/pages/winkeldetail/25711/Lemmen-Parket" target="_blank"><img src="assets/CBW_logo.png" alt="CBW logo" height="100" style="height: 100px; display: block; margin: 0 auto 1em auto;"/></a>
+            <a title="Lemmen Parket | Facebook" href="https://www.facebook.com/lemmenparket" target="_blank"><img src="assets/fb_button.png" alt="Facebook - Lemmen Parket" height="100" style="height: 100px; display: block; margin: 0 auto 1em auto;"/></a>
+        </div>
+    </div>
+</div>
+
+
+
 
 <div class="wide-photo-box" style="height: 300px"></div>
 
@@ -160,6 +180,24 @@
 
         doResizeAction();
     });
+</script>
+<script type="text/javascript">
+    //Google ReCaptcha callback:
+    function onSubmit(){
+        if($("#phoneinput").val().trim() != "" && $("#emailinput").val().trim() != "" && $("#adresinput").val().trim() != "" && $("#plaatsinput").val().trim()){
+            document.getElementById("contactform").submit();
+        }
+    }
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20329912-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </body>
 </html>
