@@ -45,14 +45,14 @@
         <div class="nine wide column">
             <form class="ui contact-form form" id="contactform" method="post" action="mail.php">
                 <h4 class="ui dividing header">Neem contact op</h4>
-                <div class="field">
+                <div class="field required">
                     <label>Naam</label>
                     <div class="two fields">
                         <div class="field">
-                            <input type="text" name="firstname" placeholder="Voornaam">
+                            <input type="text" name="firstname" id="fnameinput" placeholder="Voornaam" required>
                         </div>
                         <div class="field">
-                            <input type="text" name="lastname" placeholder="Achternaam">
+                            <input type="text" name="lastname" id="lnameinput" placeholder="Achternaam" required>
                         </div>
                     </div>
                 </div>
@@ -184,8 +184,10 @@
 <script type="text/javascript">
     //Google ReCaptcha callback:
     function onSubmit(){
-        if($("#phoneinput").val().trim() != "" && $("#emailinput").val().trim() != "" && $("#adresinput").val().trim() != "" && $("#plaatsinput").val().trim()){
+        if($("#lnameinput").val().trim() != "" && $("#fnameinput").val().trim() != "" && $("#phoneinput").val().trim() != "" && $("#emailinput").val().trim() != "" && $("#adresinput").val().trim() != "" && $("#plaatsinput").val().trim()){
             document.getElementById("contactform").submit();
+        }else {
+            alert("Vul a.u.b. alle velden in.");
         }
     }
 </script>
