@@ -14,6 +14,11 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+
+    <script src="vex/js/vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
+    <link rel="stylesheet" href="vex/css/vex.css" />
+    <link rel="stylesheet" href="vex/css/vex-theme-flat-attack.css" />
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -68,7 +73,7 @@
                     <p>
                         eiken premier tapis wisselende breedtes</p>
                 </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
+                <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
             </div>
         </div>
         <div class="eight wide column">
@@ -86,7 +91,7 @@
                     <p>
                         grenen vloer voor en na renovatie bruin middel olie</p>
                 </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
+                <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
             </div>
         </div>
     </div>
@@ -114,7 +119,7 @@
                         Daarna ingekleurd met naturel wit.
                         En wordt afgewerkt met een naturelle olie.</p>
                 </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
+                <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
             </div>
         </div>
     </div>

@@ -14,6 +14,11 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+
+    <script src="vex/js/vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
+    <link rel="stylesheet" href="vex/css/vex.css" />
+    <link rel="stylesheet" href="vex/css/vex-theme-flat-attack.css" />
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -30,7 +35,7 @@
 
 <div class="ui borderless stackable sub menu">
     <div class="ui equal width center aligned grid">
-        <a href="#" class="ui item text center aligned column" id="menu-toggle-btn"><span>Menu</span></a>
+        <a class="ui item text center aligned column" id="menu-toggle-btn"><span>Menu</span></a>
         <a href="verkoop.html" class="ui item text center aligned column switchable"><span>Verkoop</span></a>
         <a href="leggen.html" class="ui item text center aligned column switchable"><span>Leggen</span></a>
         <a href="onderhoud.html" class="ui item text center aligned column switchable selected"><span>Onderhoud</span></a>
@@ -42,13 +47,13 @@
 <h1 class="dark full-width-header">Onderhoud</h1>
 
 <div class="content-filter">
-    <a href="#" data-tag="olie" class="content-filter-element">olie</a> -
-    <a href="#" data-tag="pvc" class="content-filter-element">pvc</a> -
-    <a href="#" data-tag="polish" class="content-filter-element">polish</a> -
-    <a href="#" data-tag="was" class="content-filter-element">was</a> -
-    <a href="#" data-tag="remover" class="content-filter-element">remover</a> -
-    <a href="#" data-tag="conditioner" class="content-filter-element">conditioner</a> -
-    <a href="#" data-tag="" class="content-filter-element">alles</a>
+    <a data-tag="olie" class="content-filter-element">olie</a> -
+    <a data-tag="pvc" class="content-filter-element">pvc</a> -
+    <a data-tag="polish" class="content-filter-element">polish</a> -
+    <a data-tag="was" class="content-filter-element">was</a> -
+    <a data-tag="remover" class="content-filter-element">remover</a> -
+    <a data-tag="conditioner" class="content-filter-element">conditioner</a> -
+    <a data-tag="" class="content-filter-element">alles</a>
 </div>
 
 <div class="ui stackable grid lemmen-info" data-tag="osmo olie">
@@ -64,7 +69,7 @@
                 <p>
                     Voor houten vloeren en meubels. Kleurloos, voor binnen-zijdenmat. Natuurolie en wasbasis, openporig. Waterafstotend en slijtvast.</p>
             </div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="osmo was">
@@ -79,7 +84,7 @@
                 <p>
                     Houtafwerking voor binnen. Transparant - zijdeglans. Natuurolie en wasbasis - openporig. Waterafstotend en slijtvast.</p>
             </div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="ciranova olie">
@@ -93,7 +98,7 @@
             <div class="block-content">
                 <p>
                 </p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="ciranova olie">
@@ -107,7 +112,7 @@
             <div class="block-content">
                 <p>
                 </p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="beterhout olie">
@@ -121,7 +126,7 @@
             <div class="block-content">
                 <p>
                 </p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="osmo was">
@@ -135,7 +140,7 @@
             <div class="block-content">
                 <p>
                     Voor geoliede en met wax behandelde houten- en kurkvloeren, meubels en andere houtoppervlakken</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol polish">
@@ -149,7 +154,7 @@
             <div class="block-content">
                 <p>
                     slijtvast onderhoudsmiddel voor gelakte vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol remover">
@@ -163,7 +168,7 @@
             <div class="block-content">
                 <p>
                     intensiefreiniger voor gelakte vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol pvc polish">
@@ -177,7 +182,7 @@
             <div class="block-content">
                 <p>
                     slijtvast onderhoudsmiddel voor PVC en Vinyl vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol pvc clean">
@@ -191,7 +196,7 @@
             <div class="block-content">
                 <p>
                     Reiniger voor PVC- en Vinyl vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol clean">
@@ -205,7 +210,7 @@
             <div class="block-content">
                 <p>
                     reiniger voor gelakte en geoliede vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol polish">
@@ -219,7 +224,7 @@
             <div class="block-content">
                 <p>
                     anti-slip onderhoudsmiddel voor gelakte vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol clean">
@@ -233,7 +238,7 @@
             <div class="block-content">
                 <p>
                     onderhouds- en reinigingsmiddel voor wasvloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="leha polish">
@@ -247,7 +252,7 @@
             <div class="block-content">
                 <p>
                     onderhoudsmiddel voor gelakte vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol refresher">
@@ -261,7 +266,7 @@
             <div class="block-content">
                 <p>
                     Reinigingsmiddel voor laminaatvloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="osmo zeep">
@@ -275,7 +280,7 @@
             <div class="block-content">
                 <p>
                     geconcentreerd reinigings- en onderhoudsmiddel</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="bona clean">
@@ -289,7 +294,7 @@
             <div class="block-content">
                 <p>
                     Schoonmaakmiddel voor houten vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="bona polish">
@@ -303,7 +308,7 @@
             <div class="block-content">
                 <p>
                     Poleistmiddel voor houten vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="bona freshen">
@@ -317,7 +322,7 @@
             <div class="block-content">
                 <p>
                     Verfrist houten vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="rigostep polymer polish">
@@ -331,7 +336,7 @@
             <div class="block-content">
                 <p>
                     Onderhoudslaag voor gelakte vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="quickstep clean">
@@ -345,7 +350,7 @@
             <div class="block-content">
                 <p>
                     onderhoudsproduct voor regelmatig vochtig onderhoud van Laminaatvloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol was">
@@ -359,7 +364,7 @@
             <div class="block-content">
                 <p>
                 </p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol conditioner">
@@ -373,7 +378,7 @@
             <div class="block-content">
                 <p>
                     Onderhoudsolie voor geoliede vloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="lecol stop">
@@ -387,7 +392,7 @@
             <div class="block-content">
                 <p>
                     Vloeibare anti-slip was voor wasvloeren</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="woca zeep">
@@ -401,7 +406,7 @@
             <div class="block-content">
                 <p>
                     Vloeibare natuurzeep</p> </div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="woca reiniger">
@@ -415,7 +420,7 @@
             <div class="block-content">
                 <p>
                     vloeibare intensiefreiniger</p> </div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="was lecol">
@@ -429,7 +434,7 @@
             <div class="block-content">
                 <p>
                     vaste was</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="triptrap zeep">
@@ -443,7 +448,7 @@
             <div class="block-content">
                 <p>
                     Vloeibare natuurzeep</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="woca zeep">
@@ -457,7 +462,7 @@
             <div class="block-content">
                 <p>Vloeibare natuurzeep
                 </p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="woca olie">
@@ -471,7 +476,7 @@
             <div class="block-content">
                 <p>
                     vloeibare onderhoudsolie</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product" data-tag="croco lak">
@@ -485,7 +490,7 @@
             <div class="block-content">
                 <p>
                     polyethaan-lak-DD-EWZ-BAYER, Parket finish voor gelakt of geïmpregneerd parket</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
     <div class="eight wide column product">
@@ -499,7 +504,7 @@
             <div class="block-content">
                 <p>
                     Voor het schoonmaken van gereedschap na het aanbrengen van Osmo producten voor houtafwerking, olieverf of kunstharslak. Voor het verdunnen van verfsoorten op basis van oplosmiddelen</p></div>
-            <a href="#" class="block-info-request"><span>Meer info</span></a>
+            <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
         </div>
     </div>
 </div>
@@ -521,7 +526,7 @@
             In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
         </p>
     </div>
-    <a href="#" class="block-info-request"><span>Meer info</span></a>
+    <a class="block-info-request" onclick="vex.dialog.alert($(this).parent().find('.block-content > p').text());"><span>Meer info</span></a>
 </div>-->
 
 <script>
