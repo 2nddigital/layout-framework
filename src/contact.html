@@ -186,8 +186,11 @@
     function onSubmit(){
         if($("#lnameinput").val().trim() != "" && $("#fnameinput").val().trim() != "" && $("#phoneinput").val().trim() != "" && $("#emailinput").val().trim() != "" && $("#adresinput").val().trim() != "" && $("#plaatsinput").val().trim()){
             document.getElementById("contactform").submit();
+            return true;
         }else {
             alert("Vul a.u.b. alle velden in.");
+            grecaptcha.reset();
+            return false;
         }
     }
 </script>

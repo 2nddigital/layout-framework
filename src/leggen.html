@@ -8,12 +8,17 @@
     <title>Leggen</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="style/out/lemmen.css" >
-
+    <link rel="stylesheet" type="text/css" href="slick/out/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/out/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/out/slick-lightbox.css">
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick-lightbox.min.js"></script>
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -59,153 +64,21 @@
             </ul>
         </li>
     </ul>
-    <p></p>
-
+    <div class="imageslider">
+        <div class="image"><a href="assets/leggen/leggen%20(1).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(1).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(13).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(13).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(14).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(14).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(15).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(15).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(16).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(16).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(17).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(17).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(18).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(18).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(19).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(19).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(20).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(20).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(21).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(21).JPG"/></a></div>
+        <div class="image"><a href="assets/leggen/leggen%20(22).JPG"><img data-lazy="assets/leggen/thumbs/leggen%20(22).JPG"/></a></div>
+    </div>
     <!--<h2 class="light full-width-header">Mogelijkheden</h2>-->
 </div>
-
-<!--<div class="spacer"></div>
-
-<div class="ui equal width stackable grid lemmen-info">
-    <div class="equal width row">
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-    </div>
-    <div class="equal width row">
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-    </div>
-    <div class="equal width row">
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-        <div class="column">
-            <div class="lemmen-info-block">
-                <div class="block-title"><span>Info</span></div>
-                <div class="block-visuals">
-                    <div class="block-visual" style="background-color: #885544">
-
-                    </div>
-                    <div class="block-visual" style="background-color: #AA7755">
-
-                    </div>
-                </div>
-                <div class="block-content">
-                    <p>
-                        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-                    </p>
-                </div>
-                <a href="#" class="block-info-request"><span>Meer info</span></a>
-            </div>
-        </div>
-    </div>
-</div>-->
-
-<!--<div class="lemmen-info-block">
-    <div class="block-title"><span>Info</span></div>
-    <div class="block-visuals">
-        <div class="block-visual" style="background-color: #885544">
-
-        </div>
-        <div class="block-visual" style="background-color: #AA7755">
-
-        </div>
-    </div>
-    <div class="block-content">
-        <p>
-            In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-        </p>
-    </div>
-    <a href="#" class="block-info-request"><span>Meer info</span></a>
-</div>-->
 
 <script>
     $(document).ready(function () {
@@ -244,6 +117,30 @@
                 $('.switchable').show();
             }
         }
+
+        $('.imageslider').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToScroll: 1,
+            lazyLoad: 'progressive',
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.imageslider').slickLightbox({
+            itemSelector: '.image > a'
+        });
 
         doResizeAction();
     });
