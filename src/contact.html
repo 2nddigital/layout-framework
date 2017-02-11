@@ -15,6 +15,11 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="vex/js/vex.combined.min.js"></script>
+    <script>vex.defaultOptions.className = 'vex-theme-flat-attack'</script>
+    <link rel="stylesheet" href="vex/css/vex.css" />
+    <link rel="stylesheet" href="vex/css/vex-theme-flat-attack.css" />
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -188,7 +193,7 @@
             document.getElementById("contactform").submit();
             return true;
         }else {
-            alert("Vul a.u.b. alle velden in.");
+            vex.dialog.alert("Vul a.u.b. alle velden in.");
             grecaptcha.reset();
             return false;
         }
