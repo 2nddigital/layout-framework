@@ -9,12 +9,17 @@
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css?v=2.3">
     <link rel="stylesheet" type="text/css" href="style/out/lemmen.css?v=2.2" >
     <link rel="stylesheet" type="text/css" href="style/out/faq.css?v=2.3">
+    <link rel="stylesheet" type="text/css" href="slick/out/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/out/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="slick/out/slick-lightbox.css">
 
     <script
             src="https://code.jquery.com/jquery-3.1.1.min.js"
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="slick/slick-lightbox.min.js"></script>
 </head>
 <body>
 <div class="main-menu-placeholder"></div>
@@ -63,6 +68,30 @@
                 <a class="cd-faq-trigger" href="#0">Showroom & Assortiment</a>
                 <div class="cd-faq-content">
                     <p>Onze showroom is gevestigd in Meijel. Via deze locatie bieden wij een uitgebreid assortiment op het gebied van parket, planken, laminaat, marmoleum en kurkvloeren. Naast genoemde artikelen vindt u hier ook een groot assortiment aan onderhoudsmiddelen, overgangsprofielen, afwerklijsten en plinten. Alles wat u voor uw vloer nodig heeft kan door ons verzorgd worden.</p>
+                    <div class="imageslider">
+                        <div class="image"><a href="assets/binnen/showroom%20(1).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(1).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(2).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(2).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(3).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(3).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(4).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(4).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(5).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(5).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(6).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(6).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(7).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(7).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(8).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(8).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(9).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(9).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(10).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(10).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(11).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(11).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(12).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(12).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(13).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(13).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(14).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(14).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(15).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(15).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(16).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(16).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(17).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(17).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(18).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(18).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(19).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(19).jpg"/></a></div>
+                        <div class="image"><a href="assets/binnen/showroom%20(20).jpg"><img data-lazy="assets/binnen/thumbs/showroom%20(20).jpg"/></a></div>
+
+
+                    </div>
                 </div> <!-- cd-faq-content -->
             </li>
 
@@ -349,6 +378,30 @@
                 $('.switchable').show();
             }
         }
+
+        $('.imageslider').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToScroll: 1,
+            lazyLoad: 'progressive',
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+        $('.imageslider').slickLightbox({
+            itemSelector: '.image > a'
+        });
 
         doResizeAction();
     });
