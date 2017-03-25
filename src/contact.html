@@ -95,6 +95,11 @@
                 <button class="g-recaptcha ui button" data-sitekey="6Lc9LxAUAAAAACxrKr4t9NT3KiFAPJXrG150SzeH" data-callback="onSubmit">Verzenden</button>
                 <!-- <button class="ui button" type="submit">Verzenden</button> -->
             </form>
+            <div class="ui bottom success message" id="form-success" style="display: none;">
+                <i class="icon checkmark"></i>
+                Bedankt voor uw email!<br/>
+                Indien gewenst zullen we zo spoedig mogelijk contact opnemen.
+            </div>
         </div>
         <div class="seven wide column">
             <div class="gmaps">
@@ -190,7 +195,12 @@
     //Google ReCaptcha callback:
     function onSubmit(){
         if($("#lnameinput").val().trim() != "" && $("#fnameinput").val().trim() != "" && $("#phoneinput").val().trim() != "" && $("#emailinput").val().trim() != "" && $("#adresinput").val().trim() != "" && $("#plaatsinput").val().trim()){
-            document.getElementById("contactform").submit();
+            //document.getElementById("contactform").submit();
+            $.post('mail.php', $("#contactform").serialize(), function(d){
+                console.log(d);
+                $("#form-success").show();
+                grecaptcha.reset();
+            });
             return true;
         }else {
             vex.dialog.alert("Vul a.u.b. alle velden in.");
