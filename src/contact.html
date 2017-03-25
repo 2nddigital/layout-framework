@@ -199,6 +199,14 @@
             $.post('mail.php', $("#contactform").serialize(), function(d){
                 console.log(d);
                 $("#form-success").show();
+
+                //form reset
+                $(':input','#contactform')
+                    .not(':button, :submit, :reset, :hidden')
+                    .val('')
+                    .removeAttr('checked')
+                    .removeAttr('selected');
+
                 grecaptcha.reset();
             });
             return true;
